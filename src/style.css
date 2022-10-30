@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: rgb(26, 26, 26);
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -16,7 +17,7 @@
 
 .image-container {
   transition: all linear .2s;
-  width: 100%;
+  width: 100vw;
   position: sticky;
   height: 0;
   padding-top: 100vh;
@@ -27,4 +28,13 @@
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
+}
+
+@media (max-width: 850px) {
+  
+.image-container {
+
+  padding-top: 80vh;
+
+}
 }
