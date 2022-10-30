@@ -1,21 +1,23 @@
 import './style.css'
 
 
-
-const imageContainer = document.querySelector<HTMLElement>('.image-container')
-
-
-function changeImage(){
+window.addEventListener('scroll', () => {
+  const imageContainer = document.querySelector<HTMLElement>('.image-container')
   const y = window.scrollY;
   const label = Math.min(Math.floor(y/59) + 1, 59)
+  const value = 131;
 
-  console.log(label)
   if (imageContainer !== null){
     imageContainer.style.backgroundImage = `url('images/frame_${label}_delay-0.1s.gif')`
+    if (label > 30){
+      imageContainer.style.width = `${value - label}%`
+    }
+    if (label > 40) {
+      imageContainer.style.width = `${value - label * 1.4}%`
+    }
+ 
   }
-  
 
-  window.addEventListener('scroll', changeImage)
-}
+ 
 
-changeImage()
+})
