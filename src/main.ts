@@ -6,8 +6,6 @@ window.addEventListener('scroll', () => {
   const y = window.scrollY;
   const label = Math.min(Math.floor(y/59) + 1, 59)
   
-  console.log(Math.cos(label / 100))
-
 
   if (imageContainer !== null){
     imageContainer.style.backgroundImage = `url('images/frame_${label}_delay-0.1s.gif')`
