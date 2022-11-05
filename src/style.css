@@ -94,6 +94,7 @@ a:link {
   background-color: rgb(223, 179, 67);
   border-radius: 1.75em;
   opacity: 1;
+  z-index: 2;
 }
 
 .photo-container__small {
@@ -102,7 +103,7 @@ a:link {
   opacity: 0.4;
   background-color: rgb(223, 179, 67);
   border-radius: 1.75em;
-  
+
 }
 
 .photo-container__small--left {
@@ -117,6 +118,9 @@ a:link {
   color: rgb(223, 179, 67);
 }
 
+.photo-container__image {
+  width: 100%;
+}
 
 @media (max-width: 850px) {
   .text-container {
