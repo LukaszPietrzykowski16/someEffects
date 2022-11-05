@@ -6,17 +6,28 @@ import img4 from '../images/gallery/img4.webp'
 import img5 from '../images/gallery/img5.png'
 
 const imageArray = [img0, img1, img2, img3, img4, img5]
-const leftDiv = document.querySelector('.photo-container__small--left')
-const rightDiv = document.querySelector('.photo-container__small--right')
-const mainDiv = document.querySelector('.photo-container__photo')
-const leftButton = document.querySelector('.photo-conariner__arrow--left')
-const rightButton = document.querySelector('.photo-conariner__arrow--left')
+const leftDiv = document.querySelector<HTMLElement>('.photo-container__small--left')
+const rightDiv = document.querySelector<HTMLElement>('.photo-container__small--right')
+const mainDiv = document.querySelector<HTMLElement>('.photo-container__photo')
+const leftButton = document.querySelector<HTMLElement>('.photo-conariner__arrow--left')
+const rightButton = document.querySelector<HTMLElement>('.photo-conariner__arrow--right')
 
 const index = {
     count: 4
 }
 
-function renderImages(currentCount: number){
+function renderMainImages(currentCount: number){
+   
+    return `<img class='photo-container__image'src='${imageArray[currentCount]}'/>`
+}
+
+function renderPrevImages(currentCount: number){
+    
+    return `<img class='photo-container__image'src='${imageArray[currentCount]}'/>`
+}
+
+function renderNextImages(currentCount: number){
+    console.log(currentCount)
     return `<img class='photo-container__image'src='${imageArray[currentCount]}'/>`
 }
 
@@ -24,41 +35,42 @@ function renderImages(currentCount: number){
 
 
 function displayImages()  {
-
-    mainDiv.innerHTML = renderImages(index.count)
-    /*
-    leftDiv.innerHTML = `
-    <img 
-    class='photo-container__image'
-    src='${imageArray[index.count - 1]}'/>
-    `
-    */
-    
-    /*
-    rightDiv.innerHTML = `
-    <img 
-    class='photo-container__image'
-    src='${imageArray[index.count + 1]}'/>
-    `
-    */
+    if(mainDiv !== null){
+        mainDiv.innerHTML = renderMainImages(index.count)
+    }
+    if(leftDiv !== null){
+        leftDiv.innerHTML = renderPrevImages(index.count - 1 < 0 ? imageArray.length - 1 : index.count - 1 )
+    }
+    if(rightDiv !== null){
+        rightDiv.innerHTML = renderNextImages(index.count + 1 > imageArray.length - 1 ? 0 : index.count + 1)
+    }
 }
 
 
 
 displayImages()
+if(leftButton !== null){
+    leftButton.addEventListener('click', () => {
+        let newCount = index.count - 1;
+        index.count = newCount;
+        if(newCount < 0){
+            index.count = imageArray.length - 1;
+        }
+        displayImages();
+    })
+}
 
-leftButton.addEventListener('click', () => {
-    let newCount = index.count - 1;
-    index.count = newCount;
-    console.log(index.count)
-    displayImages();
-})
+if(rightButton !== null){
+    rightButton.addEventListener('click', () => {
+        let newCount = index.count + 1;
+        index.count = newCount;
+        if(newCount > imageArray.length - 1){
+            index.count = 0;
+        }
+        displayImages();
+    })
+}
 
-rightButton.addEventListener('click', () => {
-    let newCount = index.count + 1;
-    index.count = newCount;
-    console.log(index.count)
-    displayImages();
-})
+
 
 
