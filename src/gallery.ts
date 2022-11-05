@@ -17,17 +17,14 @@ const index = {
 }
 
 function renderMainImages(currentCount: number){
-   
     return `<img class='photo-container__image'src='${imageArray[currentCount]}'/>`
 }
 
 function renderPrevImages(currentCount: number){
-    
     return `<img class='photo-container__image'src='${imageArray[currentCount]}'/>`
 }
 
 function renderNextImages(currentCount: number){
-    console.log(currentCount)
     return `<img class='photo-container__image'src='${imageArray[currentCount]}'/>`
 }
 
