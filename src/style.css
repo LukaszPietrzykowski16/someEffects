@@ -81,6 +81,43 @@ a:link {
   background-size: cover;
 }
 
+
+.photo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-container__photo {
+  width: 20vw;
+  height: 50vh;
+  background-color: rgb(223, 179, 67);
+  border-radius: 1.75em;
+  opacity: 1;
+}
+
+.photo-container__small {
+  width: 10vw;
+  height: 25vh;
+  opacity: 0.4;
+  background-color: rgb(223, 179, 67);
+  border-radius: 1.75em;
+  
+}
+
+.photo-container__small--left {
+  transform: translateX(60px);
+}
+
+.photo-container__small--right {
+  transform: translateX(-60px);
+}
+
+.photo-conariner__arrow {
+  color: rgb(223, 179, 67);
+}
+
+
 @media (max-width: 850px) {
   .text-container {
     flex-wrap: wrap;
