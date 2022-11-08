@@ -6,6 +6,7 @@ import img4 from '../images/gallery/img4.webp'
 import img5 from '../images/gallery/img5.png'
 
 const imageArray = [img0, img1, img2, img3, img4, img5]
+// const namesArray = ['Jesse Pinkman', 'Walter White', 'Hank Shrader', 'Mike Ehrmantraut', 'Saul Goodman', 'Skyler White']
 const leftDiv = document.querySelector<HTMLElement>('.photo-container__small--left')
 const rightDiv = document.querySelector<HTMLElement>('.photo-container__small--right')
 const mainDiv = document.querySelector<HTMLElement>('.photo-container__photo')
@@ -47,15 +48,18 @@ function displayImages()  {
 
 function animate(_e: MouseEvent){
     _e.preventDefault;
-    rightDiv.classList.remove('photo-container__small--right-effect')
-    leftDiv.classList.remove('photo-container__small--left-effect')
-    mainDiv.classList.remove('photo-container__photo-effect')
-    rightDiv.offsetWidth;
-    leftDiv.offsetWidth;
-    mainDiv.offsetWidth;
-    leftDiv.classList.add('photo-container__small--left-effect')
-    rightDiv.classList.add('photo-container__small--right-effect')
-    mainDiv.classList.add('photo-container__photo-effect')
+    if(rightDiv !== null && leftDiv !== null && mainDiv !== null){
+        rightDiv.classList.remove('photo-container__small--right-effect')
+        leftDiv.classList.remove('photo-container__small--left-effect')
+        mainDiv.classList.remove('photo-container__photo-effect')
+        rightDiv.offsetWidth;
+        leftDiv.offsetWidth;
+        mainDiv.offsetWidth;
+        leftDiv.classList.add('photo-container__small--left-effect')
+        rightDiv.classList.add('photo-container__small--right-effect')
+        mainDiv.classList.add('photo-container__photo-effect')
+    }
+    
 }
 
 

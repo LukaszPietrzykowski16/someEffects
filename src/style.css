@@ -109,6 +109,7 @@ a:link {
 }
 
 .photo-container__photo {
+  text-align: center;
   width: 20vw;
   height: 50vh;
   background-color: rgb(223, 179, 67);
@@ -119,6 +120,7 @@ a:link {
 }
 
 .photo-container__small {
+  text-align: center;
   width: 10vw;
   height: 25vh;
   opacity: 0.4;
@@ -154,7 +156,12 @@ a:link {
 }
 
 .photo-container__image {
-  width: 50%;
+  margin-top: 1.25em;
+  width: 60%;
+}
+
+.photo-container img {
+  border-radius: 1.75em;
 }
 
 @media (max-width: 850px) {
