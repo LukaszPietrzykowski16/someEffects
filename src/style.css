@@ -137,8 +137,16 @@ a:link {
  
 }
 
+.photo-container__photo-effect {
+  animation: animationMain 0.8s ease-in-out;
+}
+
 .photo-container__small--right-effect {
-  animation: animationRight 1.2s ease-in-out;
+  animation: animationRight 0.8s ease-in-out;
+}
+
+.photo-container__small--left-effect {
+  animation: animationLeft 0.8s ease-in-out;
 }
 
 .photo-conariner__arrow {
@@ -174,18 +182,47 @@ a:link {
 
 @keyframes animationRight {
   0% {
-  
-    transform: translateX(120px);
+    transform: translateX(120px) scale(0.4);
     opacity: 0;
+   
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(-60px) scale(1);
+    
+  }
+}
+
+
+@keyframes animationLeft {
+  0% {
+    transform: translateX(180px) scale(1.4);
+    opacity: 0;
+    
   }
   50% {
-   
     opacity: 0.5;
   }
   100% {
-   
-    transform: translateX(-60px);
-   
+    transform: translateX(60px) scale(1);
+  }
+}
+
+@keyframes animationMain {
+  0% {
+    transform: translateX(180px) scale(0.4);
+    opacity: 0;
+    
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0px) scale(1);
   }
 }
 

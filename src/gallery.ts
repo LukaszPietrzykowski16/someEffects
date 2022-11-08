@@ -48,10 +48,14 @@ function displayImages()  {
 function animate(_e: MouseEvent){
     _e.preventDefault;
     rightDiv.classList.remove('photo-container__small--right-effect')
-   
-
+    leftDiv.classList.remove('photo-container__small--left-effect')
+    mainDiv.classList.remove('photo-container__photo-effect')
     rightDiv.offsetWidth;
+    leftDiv.offsetWidth;
+    mainDiv.offsetWidth;
+    leftDiv.classList.add('photo-container__small--left-effect')
     rightDiv.classList.add('photo-container__small--right-effect')
+    mainDiv.classList.add('photo-container__photo-effect')
 }
 
 
