@@ -46,18 +46,38 @@ function displayImages()  {
 }
 
 
-function animate(_e: MouseEvent){
+function animateRight(_e: MouseEvent){
     _e.preventDefault;
+    cleanUp()
     if(rightDiv !== null && leftDiv !== null && mainDiv !== null){
-        rightDiv.classList.remove('photo-container__small--right-effect')
-        leftDiv.classList.remove('photo-container__small--left-effect')
-        mainDiv.classList.remove('photo-container__photo-effect')
-        rightDiv.offsetWidth;
-        leftDiv.offsetWidth;
-        mainDiv.offsetWidth;
-        leftDiv.classList.add('photo-container__small--left-effect')
-        rightDiv.classList.add('photo-container__small--right-effect')
-        mainDiv.classList.add('photo-container__photo-effect')
+        leftDiv.classList.add('photo-container__small--left-effectRight')
+        rightDiv.classList.add('photo-container__small--right-effectRight')
+        mainDiv.classList.add('photo-container__photo-effectRight')
+    }
+    
+}
+
+function cleanUp(){
+    rightDiv.classList.remove('photo-container__small--right-effectRight')
+    leftDiv.classList.remove('photo-container__small--left-effectRight')
+    mainDiv.classList.remove('photo-container__photo-effectRight')
+    rightDiv.classList.remove('photo-container__small--right-effectLeft')
+    leftDiv.classList.remove('photo-container__small--left-effectLeft')
+    mainDiv.classList.remove('photo-container__photo-effectLeft')
+
+    rightDiv.offsetWidth;
+    leftDiv.offsetWidth;
+    mainDiv.offsetWidth;
+}
+
+
+function animateLeft(_e: MouseEvent){
+    _e.preventDefault;
+    cleanUp()
+    if(rightDiv !== null && leftDiv !== null && mainDiv !== null){
+        leftDiv.classList.add('photo-container__small--left-effectLeft')
+        rightDiv.classList.add('photo-container__small--right-effectLeft')
+        mainDiv.classList.add('photo-container__photo-effectLeft')
     }
     
 }
@@ -65,7 +85,8 @@ function animate(_e: MouseEvent){
 
 displayImages()
 if(leftButton !== null){
-    leftButton.addEventListener('click', () => {
+    leftButton.addEventListener('click', (e) => {
+        animateLeft(e)
         let newCount = index.count - 1;
         index.count = newCount;
         if(newCount < 0){
@@ -77,7 +98,7 @@ if(leftButton !== null){
 
 if(rightButton !== null){
     rightButton.addEventListener('click', (e) => {
-        animate(e)
+        animateRight(e)
         let newCount = index.count + 1;
         index.count = newCount;
         if(newCount > imageArray.length - 1){

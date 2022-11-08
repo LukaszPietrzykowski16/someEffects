@@ -139,16 +139,28 @@ a:link {
  
 }
 
-.photo-container__photo-effect {
-  animation: animationMain 0.8s ease-in-out;
+.photo-container__photo-effectRight {
+  animation: rightAnimationMain 0.8s ease-in-out;
 }
 
-.photo-container__small--right-effect {
-  animation: animationRight 0.8s ease-in-out;
+.photo-container__small--right-effectRight {
+  animation: rightAnimationRight 0.8s ease-in-out;
 }
 
-.photo-container__small--left-effect {
-  animation: animationLeft 0.8s ease-in-out;
+.photo-container__small--left-effectRight {
+  animation: rightAnimationLeft 0.8s ease-in-out;
+}
+
+.photo-container__photo-effectLeft {
+  animation: leftAnimationMain 0.8s ease-in-out;
+}
+
+.photo-container__small--right-effectLeft {
+  animation: leftAnimationRight 0.8s ease-in-out;
+}
+
+.photo-container__small--left-effectLeft {
+  animation: leftAnimationLeft 0.8s ease-in-out;
 }
 
 .photo-conariner__arrow {
@@ -187,7 +199,7 @@ a:link {
 
 }
 
-@keyframes animationRight {
+@keyframes rightAnimationRight {
   0% {
     transform: translateX(120px) scale(0.4);
     opacity: 0;
@@ -205,7 +217,7 @@ a:link {
 }
 
 
-@keyframes animationLeft {
+@keyframes rightAnimationLeft {
   0% {
     transform: translateX(180px) scale(1.4);
     opacity: 0;
@@ -219,7 +231,7 @@ a:link {
   }
 }
 
-@keyframes animationMain {
+@keyframes rightAnimationMain {
   0% {
     transform: translateX(180px) scale(0.4);
     opacity: 0;
@@ -233,6 +245,52 @@ a:link {
   }
 }
 
+
+@keyframes leftAnimationRight {
+  0% {
+    transform: translateX(120px) scale(0.4);
+    opacity: 0;
+   
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(-60px) scale(1);
+    
+  }
+}
+
+
+@keyframes leftAnimationLeft {
+  0% {
+    transform: translateX(180px) scale(1.4);
+    opacity: 0;
+    
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(60px) scale(1);
+  }
+}
+
+@keyframes leftAnimationMain {
+  0% {
+    transform: translateX(180px) scale(0.4);
+    opacity: 0;
+    
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
 
 
 
