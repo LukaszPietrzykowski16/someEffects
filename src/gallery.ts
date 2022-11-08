@@ -58,16 +58,19 @@ function animateRight(_e: MouseEvent){
 }
 
 function cleanUp(){
-    rightDiv.classList.remove('photo-container__small--right-effectRight')
-    leftDiv.classList.remove('photo-container__small--left-effectRight')
-    mainDiv.classList.remove('photo-container__photo-effectRight')
-    rightDiv.classList.remove('photo-container__small--right-effectLeft')
-    leftDiv.classList.remove('photo-container__small--left-effectLeft')
-    mainDiv.classList.remove('photo-container__photo-effectLeft')
-
-    rightDiv.offsetWidth;
-    leftDiv.offsetWidth;
-    mainDiv.offsetWidth;
+    if(rightDiv !== null && leftDiv !== null && mainDiv !== null) {
+        rightDiv.classList.remove('photo-container__small--right-effectRight')
+        leftDiv.classList.remove('photo-container__small--left-effectRight')
+        mainDiv.classList.remove('photo-container__photo-effectRight')
+        rightDiv.classList.remove('photo-container__small--right-effectLeft')
+        leftDiv.classList.remove('photo-container__small--left-effectLeft')
+        mainDiv.classList.remove('photo-container__photo-effectLeft')
+    
+        rightDiv.offsetWidth;
+        leftDiv.offsetWidth;
+        mainDiv.offsetWidth;
+    }
+    
 }
 
 

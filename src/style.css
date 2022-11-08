@@ -159,7 +159,7 @@ a:link {
   animation: leftAnimationRight 0.8s ease-in-out;
 }
 
-.photo-container__small--left-effectLeft {
+.photo-container__small--left-effect {
   animation: leftAnimationLeft 0.8s ease-in-out;
 }
 
@@ -248,7 +248,7 @@ a:link {
 
 @keyframes leftAnimationRight {
   0% {
-    transform: translateX(120px) scale(0.4);
+    transform: translateX(-180px) scale(0);
     opacity: 0;
    
   }
