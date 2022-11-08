@@ -40,9 +40,19 @@ function displayImages()  {
     }
     if(rightDiv !== null){
         rightDiv.innerHTML = renderNextImages(index.count + 1 > imageArray.length - 1 ? 0 : index.count + 1)
+        
     }
 }
 
+
+function animate(_e: MouseEvent){
+    _e.preventDefault;
+    rightDiv.classList.remove('photo-container__small--right-effect')
+   
+
+    rightDiv.offsetWidth;
+    rightDiv.classList.add('photo-container__small--right-effect')
+}
 
 
 displayImages()
@@ -58,7 +68,8 @@ if(leftButton !== null){
 }
 
 if(rightButton !== null){
-    rightButton.addEventListener('click', () => {
+    rightButton.addEventListener('click', (e) => {
+        animate(e)
         let newCount = index.count + 1;
         index.count = newCount;
         if(newCount > imageArray.length - 1){
