@@ -176,6 +176,19 @@ a:link {
   border-radius: 1.75em;
 }
 
+@media (max-width: 1200px) {
+  
+.photo-container__photo {
+  width: 30vw;
+  height: 50vh;
+}
+
+.photo-container__small {
+  width: 15vw;
+  height: 25vh;
+}
+}
+
 @media (max-width: 850px) {
   .text-container {
     flex-wrap: wrap;
@@ -197,6 +210,28 @@ a:link {
     padding: 0.4;
   }
 
+  .photo-container__photo {
+    width: 40vw;
+    height: 50vh;
+  }
+  
+  .photo-container__small {
+    width: 20vw;
+    height: 25vh;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .photo-container__photo {
+    width: 300vw;
+    height: 50vh;
+  }
+  
+  .photo-container__small {
+    width: 100vw;
+    height: 25vh;
+  }
 }
 /* right card: 60px*/
 @keyframes rightAnimationRight {
