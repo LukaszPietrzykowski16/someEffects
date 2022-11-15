@@ -6,6 +6,7 @@
   scroll-behavior: smooth;
 }
 
+
 .container {
   position: relative;
   width: 100%;
@@ -164,6 +165,7 @@ a:link {
 }
 
 .photo-conariner__arrow {
+  
   color: rgb(223, 179, 67);
 }
 
