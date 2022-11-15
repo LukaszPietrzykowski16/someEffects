@@ -201,7 +201,7 @@ a:link {
 /* right card: 60px*/
 @keyframes rightAnimationRight {
   0% {
-    transform: translateX(-120px) scale(0.4);
+    transform: translateX(-180px) scale(0.4);
     opacity: 0;
    
   }
@@ -233,7 +233,7 @@ a:link {
 /* main card: 180px*/
 @keyframes rightAnimationMain {
   0% {
-    transform: translateX(180px) scale(0.4);
+    transform: translateX(120px) scale(0.4);
     
     
   }
@@ -245,9 +245,12 @@ a:link {
 /* right card: 60px*/
 @keyframes leftAnimationRight {
   0% {
-    transform: translateX(-180px) scale(0.4);
+    transform: translateX(-180px) scale(1.4);
     opacity: 0;
    
+  }
+  50% {
+    opacity: 0.5;
   }
 
   100% {
@@ -259,11 +262,15 @@ a:link {
 /* left card: 60px*/
 @keyframes leftAnimationLeft {
   0% {
-    transform: translateX(120px) scale(0.4);
+    transform: translateX(180px) scale(0.4);
     opacity: 0;
     
   }
   
+  50% {
+    opacity: 0.5;
+  }
+
   100% {
     transform: translateX(60px) scale(1);
   }
@@ -271,7 +278,7 @@ a:link {
 /* main card: 180px*/
 @keyframes leftAnimationMain {
   0% {
-    transform: translateX(-180px) scale(0.4);
+    transform: translateX(-120px) scale(0.4);
   }
 
   100% {
