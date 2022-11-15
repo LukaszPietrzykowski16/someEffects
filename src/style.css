@@ -159,7 +159,7 @@ a:link {
   animation: leftAnimationRight 0.8s ease-in-out;
 }
 
-.photo-container__small--left-effect {
+.photo-container__small--left-effectLeft {
   animation: leftAnimationLeft 0.8s ease-in-out;
 }
 
@@ -198,10 +198,10 @@ a:link {
   }
 
 }
-
+/* right card: 60px*/
 @keyframes rightAnimationRight {
   0% {
-    transform: translateX(120px) scale(0.4);
+    transform: translateX(-120px) scale(0.4);
     opacity: 0;
    
   }
@@ -216,7 +216,7 @@ a:link {
   }
 }
 
-
+/* left card: 120px*/
 @keyframes rightAnimationLeft {
   0% {
     transform: translateX(180px) scale(1.4);
@@ -230,31 +230,24 @@ a:link {
     transform: translateX(60px) scale(1);
   }
 }
-
+/* main card: 180px*/
 @keyframes rightAnimationMain {
   0% {
     transform: translateX(180px) scale(0.4);
-    opacity: 0;
     
-  }
-  50% {
-    opacity: 0.5;
+    
   }
   100% {
     transform: translateX(0px) scale(1);
   }
 }
 
-
+/* right card: 60px*/
 @keyframes leftAnimationRight {
   0% {
-    transform: translateX(-180px) scale(0);
+    transform: translateX(-180px) scale(0.4);
     opacity: 0;
    
-  }
-
-  50% {
-    opacity: 0.5;
   }
 
   100% {
@@ -263,30 +256,24 @@ a:link {
   }
 }
 
-
+/* left card: 60px*/
 @keyframes leftAnimationLeft {
   0% {
-    transform: translateX(180px) scale(1.4);
+    transform: translateX(120px) scale(0.4);
     opacity: 0;
     
   }
-  50% {
-    opacity: 0.5;
-  }
+  
   100% {
     transform: translateX(60px) scale(1);
   }
 }
-
+/* main card: 180px*/
 @keyframes leftAnimationMain {
   0% {
-    transform: translateX(180px) scale(0.4);
-    opacity: 0;
-    
+    transform: translateX(-180px) scale(0.4);
   }
-  50% {
-    opacity: 0.5;
-  }
+
   100% {
     transform: translateX(0px) scale(1);
   }
