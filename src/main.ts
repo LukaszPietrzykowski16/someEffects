@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
   
 
   if (imageContainer !== null){
-    imageContainer.style.backgroundImage = `url('images/frame_${label}_delay-0.1s.gif')`
+    imageContainer.style.backgroundImage = `url('images/frames/frame_${label}_delay-0.1s.gif')`
     if (label < 30) {
       imageContainer.style.transform = `scale(1.0)`
     }
