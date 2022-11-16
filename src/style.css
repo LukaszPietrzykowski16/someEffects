@@ -165,7 +165,7 @@ a:link {
 }
 
 .photo-conariner__arrow {
-  
+  position: relative;
   color: rgb(223, 179, 67);
 }
 
@@ -226,15 +226,31 @@ a:link {
 
 @media (max-width: 500px) {
   .photo-container__photo {
-    width: 300vw;
+    /* i'm not sure if this is good aproach */
+    width: 40vw;
     height: 50vh;
   }
   
   .photo-container__small {
-    width: 100vw;
+    width: 20vw;
     height: 25vh;
   }
 }
+
+@media (max-width: 400px) {
+  .photo-container__photo {
+    /* i'm not sure if this is good aproach */
+    width: 100vw;
+    height: 50vh;
+  }
+  
+  .photo-container__small {
+    width: 40vw;
+    height: 25vh;
+  }
+}
+
+
 /* right card: 60px*/
 @keyframes rightAnimationRight {
   0% {
