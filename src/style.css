@@ -177,7 +177,7 @@ a:link {
 
 .photo-container__image {
   margin-top: 1.25em;
-  width: 60%;
+  width: 60%; /* it depends on size of the image */
 }
 
 .photo-container img {
@@ -188,7 +188,7 @@ a:link {
   
 .photo-container__photo {
   width: 30vw;
-  height: 50vh;
+  height: 60vh;
 }
 
 .photo-container__small {
@@ -220,7 +220,7 @@ a:link {
 
   .photo-container__photo {
     width: 40vw;
-    height: 50vh;
+    height: 60vh;
   }
   
   .photo-container__small {
@@ -234,7 +234,7 @@ a:link {
   .photo-container__photo {
     /* i'm not sure if this is good aproach */
     width: 40vw;
-    height: 50vh;
+    height: 60vh;
   }
   
   .photo-container__small {
@@ -247,7 +247,7 @@ a:link {
   .photo-container__photo {
     /* i'm not sure if this is good aproach */
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
   }
   
   .photo-container__small {
