@@ -112,13 +112,19 @@ a:link {
 .photo-container__photo {
   text-align: center;
   width: 20vw;
-  height: 50vh;
+  height: 60vh;
   background-color: rgb(223, 179, 67);
   border-radius: 1.75em;
   opacity: 1;
   z-index: 2;
   
 }
+
+.photo-container__photo h1, p{
+  background-color: rgb(223, 179, 67);
+  padding: 0.25em;
+}
+
 
 .photo-container__small {
   text-align: center;

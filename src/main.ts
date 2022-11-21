@@ -1,5 +1,5 @@
 import './style.css'
-
+// i need import photos here 
 
 window.addEventListener('scroll', () => {
   const imageContainer = document.querySelector<HTMLElement>('.image-container')

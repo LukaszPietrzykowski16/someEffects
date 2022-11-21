@@ -5,20 +5,30 @@ import img3 from '../images/gallery/img3.webp'
 import img4 from '../images/gallery/img4.webp'
 import img5 from '../images/gallery/img5.png'
 
-const imageArray = [img0, img1, img2, img3, img4, img5]
-// const namesArray = ['Jesse Pinkman', 'Walter White', 'Hank Shrader', 'Mike Ehrmantraut', 'Saul Goodman', 'Skyler White']
+const imageArray:Array<any> = [img0, img1, img2, img3, img4, img5]
+const namesArray:Array<string> = ['Jesse Pinkman', 'Walter White', 'Hank Shrader', 'Mike Ehrmantraut', 'Saul Goodman', 'Skyler White']
+const paragraphArray:Array<string> = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus ex fermentum viverra ultricies. Maecenas scelerisque risus nec nunc elementum, in auctor massa gravida. Nunc vel tincidunt lectus. Sed volutpat efficitur purus non tincidunt. Mauris blandit, elit ac mollis ultrices, turpis risus malesuada augue, quis auctor tellus ante ut sem. Ut porttitor ligula quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nulla finibus, posuere ante vitae, semper diam. Mauris sit amet erat felis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus ex fermentum viverra ultricies. Maecenas scelerisque risus nec nunc elementum, in auctor massa gravida. Nunc vel tincidunt lectus. Sed volutpat efficitur purus non tincidunt. Mauris blandit, elit ac mollis ultrices, turpis risus malesuada augue, quis auctor tellus ante ut sem. Ut porttitor ligula quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nulla finibus, posuere ante vitae, semper diam. Mauris sit amet erat felis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus ex fermentum viverra ultricies. Maecenas scelerisque risus nec nunc elementum, in auctor massa gravida. Nunc vel tincidunt lectus. Sed volutpat efficitur purus non tincidunt. Mauris blandit, elit ac mollis ultrices, turpis risus malesuada augue, quis auctor tellus ante ut sem. Ut porttitor ligula quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nulla finibus, posuere ante vitae, semper diam. Mauris sit amet erat felis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus ex fermentum viverra ultricies. Maecenas scelerisque risus nec nunc elementum, in auctor massa gravida. Nunc vel tincidunt lectus. Sed volutpat efficitur purus non tincidunt. Mauris blandit, elit ac mollis ultrices, turpis risus malesuada augue, quis auctor tellus ante ut sem. Ut porttitor ligula quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nulla finibus, posuere ante vitae, semper diam. Mauris sit amet erat felis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus ex fermentum viverra ultricies. Maecenas scelerisque risus nec nunc elementum, in auctor massa gravida. Nunc vel tincidunt lectus. Sed volutpat efficitur purus non tincidunt. Mauris blandit, elit ac mollis ultrices, turpis risus malesuada augue, quis auctor tellus ante ut sem. Ut porttitor ligula quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nulla finibus, posuere ante vitae, semper diam. Mauris sit amet erat felis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus ex fermentum viverra ultricies. Maecenas scelerisque risus nec nunc elementum, in auctor massa gravida. Nunc vel tincidunt lectus. Sed volutpat efficitur purus non tincidunt. Mauris blandit, elit ac mollis ultrices, turpis risus malesuada augue, quis auctor tellus ante ut sem. Ut porttitor ligula quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nulla finibus, posuere ante vitae, semper diam. Mauris sit amet erat felis.']
 const leftDiv = document.querySelector<HTMLElement>('.photo-container__small--left')
 const rightDiv = document.querySelector<HTMLElement>('.photo-container__small--right')
 const mainDiv = document.querySelector<HTMLElement>('.photo-container__photo')
 const leftButton = document.querySelector<HTMLElement>('.photo-conariner__arrow--left')
 const rightButton = document.querySelector<HTMLElement>('.photo-conariner__arrow--right')
 
-const index = {
+
+interface indexType {
+    count: number;
+  }
+
+const index:indexType = {
     count: 4
 }
 
 function renderMainImages(currentCount: number){
-    return `<img class='photo-container__image'src='${imageArray[currentCount]}'/>`
+    return `
+    <img class='photo-container__image'src='${imageArray[currentCount]}'/> 
+    <h1> ${namesArray[currentCount]} </h1>
+    <p> ${paragraphArray[currentCount].slice(0, 180)} </p>
+    `
 }
 
 function renderPrevImages(currentCount: number){
@@ -32,7 +42,7 @@ function renderNextImages(currentCount: number){
 
 
 
-function displayImages()  {
+function displayImages():void  {
     if(mainDiv !== null){
         mainDiv.innerHTML = renderMainImages(index.count)
     }
@@ -46,7 +56,7 @@ function displayImages()  {
 }
 
 
-function animateRight(_e: MouseEvent){
+function animateRight(_e: MouseEvent):void {
     _e.preventDefault;
     cleanUp()
     if(rightDiv !== null && leftDiv !== null && mainDiv !== null){
