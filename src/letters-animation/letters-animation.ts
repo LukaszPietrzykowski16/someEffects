@@ -13,5 +13,22 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("mousemove", (event) => {
-  console.log(event.clientX, event.clientY);
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+  const text = document.querySelectorAll(".text");
+  text.forEach((letter) => {
+    const rect = letter.getBoundingClientRect();
+    if (
+      mouseX >= rect.left &&
+      mouseX <= rect.right &&
+      mouseY >= rect.top &&
+      mouseY <= rect.bottom
+    ) {
+      animateLetter(letter);
+    }
+  });
 });
+
+function animateLetter(letter: any) {
+  letter.classList.add("hover-text");
+}
