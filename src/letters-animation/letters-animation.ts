@@ -6,9 +6,11 @@ const textContainer = document.querySelector(".text-container");
 window.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < text.length; i++) {
     const div = document.createElement("div");
+    const span = document.createElement("span");
+    div.appendChild(span);
+    span.innerHTML = text[i];
     textContainer?.appendChild(div);
     div.classList.add("text");
-    div.innerHTML = text[i];
   }
 });
 
