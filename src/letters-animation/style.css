@@ -18,3 +18,24 @@ span:hover:after {
   display: inline-block;
   transform: translateY(-25%) scale(1.2);
 }
+
+.taller-A {
+  line-height: 1.8; /* Adjust this value to make the letter taller */
+}
+
+.marquee {
+  font-size: 5rem; /* set the initial font size */
+  display: inline-block;
+}
+
+.marquee span:hover {
+  transform: translateY(20.5%) scale(1, 2);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+
+.marquee span:not(:hover) {
+  transform: translateY(0%), scale(1, 1);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
