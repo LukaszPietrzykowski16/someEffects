@@ -4,8 +4,8 @@
   box-sizing: border-box;
   background-color: rgb(26, 26, 26);
   scroll-behavior: smooth;
+  font-family: "Julius Sans One", sans-serif;
 }
-
 
 .container {
   position: relative;
@@ -35,12 +35,11 @@
   animation: fadeIn 2s ease-in-out;
 }
 
-.container-h1 h1{
+.container-h1 h1 {
   background-color: transparent;
   font-size: 9em;
   border-right: 6px solid white;
   padding: 0.4;
-
 }
 
 a:link {
@@ -50,7 +49,7 @@ a:link {
 }
 
 .name {
-  background-color: transparent; 
+  background-color: transparent;
   border-radius: 20px;
   border: 1px solid white;
   color: white;
@@ -68,21 +67,21 @@ a:link {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all linear .2s;
+  transition: all linear 0.2s;
   width: 100vw;
   position: sticky;
   height: 100vh;
-  
+
   top: 0;
   background-size: cover;
-  background-image: url('../images/frame_0_delay-0.1s.gif');
+  background-image: url("../images/frame_0_delay-0.1s.gif");
   object-fit: cover;
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
-.space{
+.space {
   height: 200vh;
 }
 
@@ -96,8 +95,7 @@ a:link {
   background-color: darkgray;
 }
 
-
-.photo-container{
+.photo-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,14 +115,13 @@ a:link {
   border-radius: 1.75em;
   opacity: 1;
   z-index: 2;
-  
 }
 
-.photo-container__photo h1, p{
+.photo-container__photo h1,
+p {
   background-color: rgb(223, 179, 67);
   padding: 0.25em;
 }
-
 
 .photo-container__small {
   text-align: center;
@@ -133,17 +130,14 @@ a:link {
   opacity: 0.4;
   background-color: rgb(223, 179, 67);
   border-radius: 1.75em;
- 
 }
 
 .photo-container__small--left {
   transform: translateX(60px);
-  
 }
 
 .photo-container__small--right {
   transform: translateX(-60px);
- 
 }
 
 .photo-container__photo-effectRight {
@@ -185,16 +179,15 @@ a:link {
 }
 
 @media (max-width: 1200px) {
-  
-.photo-container__photo {
-  width: 30vw;
-  height: 60vh;
-}
+  .photo-container__photo {
+    width: 30vw;
+    height: 60vh;
+  }
 
-.photo-container__small {
-  width: 15vw;
-  height: 25vh;
-}
+  .photo-container__small {
+    width: 15vw;
+    height: 25vh;
+  }
 }
 
 @media (max-width: 850px) {
@@ -208,9 +201,8 @@ a:link {
     font-size: 1.6em;
     padding: 0;
     margin: 0.2em;
-    
   }
-  
+
   .text-container h1 {
     background-color: transparent;
     font-size: 5em;
@@ -222,12 +214,11 @@ a:link {
     width: 40vw;
     height: 60vh;
   }
-  
+
   .photo-container__small {
     width: 20vw;
     height: 25vh;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -236,7 +227,7 @@ a:link {
     width: 40vw;
     height: 60vh;
   }
-  
+
   .photo-container__small {
     width: 20vw;
     height: 25vh;
@@ -249,20 +240,18 @@ a:link {
     width: 100vw;
     height: 60vh;
   }
-  
+
   .photo-container__small {
     width: 40vw;
     height: 25vh;
   }
 }
 
-
 /* right card: 60px*/
 @keyframes rightAnimationRight {
   0% {
     transform: translateX(-180px) scale(0.4);
     opacity: 0;
-   
   }
 
   50% {
@@ -271,7 +260,6 @@ a:link {
 
   100% {
     transform: translateX(-60px) scale(1);
-    
   }
 }
 
@@ -280,7 +268,6 @@ a:link {
   0% {
     transform: translateX(180px) scale(1.4);
     opacity: 0;
-    
   }
   50% {
     opacity: 0.5;
@@ -293,8 +280,6 @@ a:link {
 @keyframes rightAnimationMain {
   0% {
     transform: translateX(120px) scale(0.4);
-    
-    
   }
   100% {
     transform: translateX(0px) scale(1);
@@ -306,7 +291,6 @@ a:link {
   0% {
     transform: translateX(-180px) scale(1.4);
     opacity: 0;
-   
   }
   50% {
     opacity: 0.5;
@@ -314,7 +298,6 @@ a:link {
 
   100% {
     transform: translateX(-60px) scale(1);
-    
   }
 }
 
@@ -323,9 +306,8 @@ a:link {
   0% {
     transform: translateX(180px) scale(0.4);
     opacity: 0;
-    
   }
-  
+
   50% {
     opacity: 0.5;
   }
@@ -344,8 +326,6 @@ a:link {
     transform: translateX(0px) scale(1);
   }
 }
-
-
 
 @keyframes fadeIn {
   0% {

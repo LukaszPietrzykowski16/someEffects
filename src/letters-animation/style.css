@@ -1,41 +1,47 @@
 span {
-  font-size: 8rem;
-}
-
-span {
+  font-size: 6rem;
   display: inline-block;
-  transform: translateY(0%) scale(1);
+  transform: translateY(0%) scale(1, 2);
   transition: transform 0.5s ease-in-out;
+  background: transparent;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+  cursor: pointer;
 }
 
-span:hover {
-  transform: translateY(-20%) scale(1.4);
-}
-
-span:hover:before,
-span:hover:after {
-  content: attr(data-letter);
+.span-container {
+  background: transparent;
+  font-size: 8rem;
   display: inline-block;
-  transform: translateY(-25%) scale(1.2);
+  color: white;
+  letter-spacing: -2px;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
 }
 
-.taller-A {
-  line-height: 1.8; /* Adjust this value to make the letter taller */
-}
-
-.marquee {
-  font-size: 5rem; /* set the initial font size */
-  display: inline-block;
-}
-
-.marquee span:hover {
-  transform: translateY(20.5%) scale(1, 2);
+.span-container span:hover {
+  transform: translateY(20%) scale(1, 3);
   transform-origin: bottom;
   transition: transform 0.3s ease-in-out;
 }
 
-.marquee span:not(:hover) {
+.span-container span:not(:hover) {
   transform: translateY(0%), scale(1, 1);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+
+.span-container span:hover + span {
+  transform: translateY(10%) scale(1, 2.5);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+
+.span-container span.before-span {
+  transform: translateY(10%) scale(1, 2.5);
   transform-origin: bottom;
   transition: transform 0.3s ease-in-out;
 }
