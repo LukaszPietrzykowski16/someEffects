@@ -226,7 +226,8 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  perspective: 1000px;
+  overflow: hidden;
   border-radius: 8px;
 }
 
@@ -236,6 +237,11 @@ p {
   padding: 16px;
   border-radius: 0.25rem;
   border: 1px solid rgb(223, 179, 67);
+  transition: transform 0.5s ease-out;
+}
+
+.component:hover .text-wrapper {
+  transform: rotateY(10deg);
 }
 
 h1 {
