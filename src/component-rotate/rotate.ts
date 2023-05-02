@@ -1,5 +1,7 @@
 const component = document.querySelector(".component");
 const textWrapper = document.querySelector<HTMLElement>(".text-wrapper");
+const minValue = 0;
+const rotateDegresValue = 0.019;
 
 textWrapper!.addEventListener("mousemove", (event: Event) => {
   const mouseEvent = event as MouseEvent;
@@ -7,16 +9,25 @@ textWrapper!.addEventListener("mousemove", (event: Event) => {
   const divLeft = textWrapper!.offsetLeft;
 
   if (mouseEvent.clientX < divLeft + divWidth / 2) {
-    console.log("left");
-    textWrapper!.style.transform = `rotateY(${mouseEvent.clientX * 0.039}deg)`;
-  } else {
-    console.log("right");
-    textWrapper!.style.transform = `rotateY(-${mouseEvent.clientX * 0.039}deg)`;
-  }
+    const rotation = mapRange(mouseEvent.clientX, minValue, divWidth);
 
-  console.log(mouseEvent.clientX, divWidth);
+    textWrapper!.style.transform = `rotateY(${
+      rotation! * rotateDegresValue
+    }deg)`;
+  } else {
+    textWrapper!.style.transform = `rotateY(-${
+      mouseEvent.clientX * rotateDegresValue
+    }deg)`;
+  }
 });
 
 textWrapper!.addEventListener("mouseleave", () => {
   textWrapper!.style.transform = `rotateY(0deg)`;
 });
+
+function mapRange(value: number, minNumber: number, maxNumber: number) {
+  if (value === maxNumber / 2) {
+    return value;
+  } else value < maxNumber / 2;
+  return maxNumber - value;
+}
