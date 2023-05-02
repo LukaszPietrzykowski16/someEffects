@@ -228,6 +228,7 @@ p {
   align-items: center;
   perspective: 1000px;
   overflow: hidden;
+  padding-top: 90px;
   border-radius: 8px;
 }
 
