@@ -222,14 +222,18 @@ p {
 }
 
 .component {
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   perspective: 1000px;
   overflow: hidden;
-  padding-top: 90px;
   border-radius: 8px;
+}
+
+.padding {
+  height: 20vh;
 }
 
 .text-wrapper {
@@ -277,6 +281,13 @@ p {
 
 .button:hover {
   background-color: #218838;
+}
+
+#glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 60px 60px 60px 60px #f00000;
 }
 
 @media (max-width: 500px) {
