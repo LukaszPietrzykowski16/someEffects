@@ -26,6 +26,8 @@ textWrapper!.addEventListener("mouseleave", () => {
   textWrapper!.style.transform = `rotateY(0deg)`;
 });
 
+function hideFollower() {}
+
 function mapRange(value: number, minNumber: number, maxNumber: number) {
   if (value === maxNumber / 2) {
     return value;
@@ -37,18 +39,32 @@ var delay = 100; // Set the delay time in milliseconds
 var timeOutDelay;
 
 textWrapper!.addEventListener("mousemove", (event: Event) => {
-  timeOutDelay = setTimeout(() => {
-    const glowEffect = document.querySelector<HTMLElement>("#glow");
-    const mouseEvent = event as MouseEvent;
+  const glowEffect = document.querySelector<HTMLElement>("#glow");
+  const mouseEvent = event as MouseEvent;
 
-    let mouseX = mouseEvent.clientX;
-    let mouseY = mouseEvent.clientY;
+  let mouseX = mouseEvent.clientX;
+  let mouseY = mouseEvent.clientY;
 
-    const scrollX = window.scrollX;
-    const scrollY = window.scrollY;
-    mouseX += scrollX;
-    mouseY += scrollY;
-    glowEffect!.style.left = `${mouseX - glowEffect!?.offsetWidth / 2}px`;
-    glowEffect!.style.top = `${mouseY - glowEffect!?.offsetHeight / 2}px`;
-  }, delay);
+  const scrollX = window.scrollX;
+  const scrollY = window.scrollY;
+
+  glowEffect!.style.width = "50px";
+  glowEffect!.style.height = "50px";
+
+  mouseX += scrollX;
+  mouseY += scrollY;
+  glowEffect!.style.left = `${mouseX - glowEffect!?.offsetWidth / 2}px`;
+  glowEffect!.style.top = `${mouseY - glowEffect!?.offsetHeight / 2}px`;
+
+  // var followerRect = glowEffect!.getBoundingClientRect();
+  // if (
+  //   followerRect.left < 0 ||
+  //   followerRect.right > textWrapper!.offsetWidth ||
+  //   followerRect.top < 0 ||
+  //   followerRect.bottom > textWrapper!.offsetHeight
+  // ) {
+  //   glowEffect!.style.visibility = "hidden";
+  // } else {
+  //   glowEffect!.style.visibility = "visible";
+  // }
 });
