@@ -222,7 +222,6 @@ p {
 }
 
 .component {
-  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,6 +229,8 @@ p {
   perspective: 1000px;
   overflow: hidden;
   border-radius: 8px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .padding {
@@ -244,10 +245,6 @@ p {
   border: 1px solid rgb(223, 179, 67);
   transition: transform 0.5s ease-out;
   overflow: hidden;
-}
-
-.component:hover .text-wrapper {
-  transform: rotateY(10deg);
 }
 
 h1 {
@@ -291,6 +288,8 @@ p {
   background-color: red;
   z-index: 99;
   pointer-events: none;
+  transform: translate(-50%, -50%);
+  clip-path: circle(50%);
 }
 
 @media (max-width: 500px) {
