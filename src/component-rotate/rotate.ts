@@ -22,9 +22,9 @@ textWrapper!.addEventListener("mousemove", (event: Event) => {
   }
 });
 
-// textWrapper!.addEventListener("mouseleave", () => {
-//   textWrapper!.style.transform = `rotateY(0deg)`;
-// });
+textWrapper!.addEventListener("mouseleave", () => {
+  textWrapper!.style.transform = `rotateY(0deg)`;
+});
 
 function mapRange(value: number, minNumber: number, maxNumber: number) {
   if (value === maxNumber / 2) {
