@@ -1,0 +1,21 @@
+.red-block {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: red;
+  animation: x 2s linear infinite alternate,
+    y 2s infinite cubic-bezier(0, 500, 1, 500);
+  left: 10px;
+  top: 200px;
+}
+
+@keyframes x {
+  to {
+    left: 250px;
+  }
+}
+@keyframes y {
+  to {
+    top: 199.5px;
+  }
+}
