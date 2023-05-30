@@ -23,7 +23,7 @@ class AnimatedDiv {
       const keyframeInXAxis = [
         { left: `${mouseX}px`, opacity: 0 },
         { opacity: 1 },
-        { left: `${mouseX + 200}px` },
+        { left: `${this.generateRandomNumber(mouseX)}px` },
       ];
       const keyframeInYAxis = [
         { top: `${mouseY}px`, opacity: 0 },
@@ -71,6 +71,14 @@ class AnimatedDiv {
 
       this.body!.appendChild(newDiv);
     });
+  }
+
+  generateRandomNumber(positionX: number) {
+    const randomNumber = Math.random();
+    const scaledNumber = randomNumber * 1600 - 800;
+    const randomInteger = Math.round(scaledNumber);
+
+    return positionX - randomInteger;
   }
 }
 const animatedDiv = new AnimatedDiv();
