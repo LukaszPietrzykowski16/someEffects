@@ -8,14 +8,3 @@
   left: 10px;
   top: 200px;
 }
-
-@keyframes x {
-  to {
-    left: 250px;
-  }
-}
-@keyframes y {
-  to {
-    top: 199.5px;
-  }
-}
