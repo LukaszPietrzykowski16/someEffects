@@ -12,30 +12,48 @@ body?.addEventListener("click", (e) => {
   newDiv.classList.add("red-block");
 
   const keyframeInXAxis = [
-    { left: `${mouseX}px` },
+    { left: `${mouseX}px`, opacity: 1 },
+    { opacit: 0 },
     { left: `${mouseX + 200}px` },
   ];
   const keyframeInYAxis = [
-    { top: `${mouseY}px` },
+    { top: `${mouseY}px`, opacity: 1 },
+    { opacit: 0 },
     { top: `${mouseY - 0.5}px` },
   ];
+
+  const keyframesOpacity = [{ opacity: 1 }, { opacity: 0 }];
 
   const keyFrameEffectX = new KeyframeEffect(
     document.querySelector(".red-block"),
     keyframeInXAxis,
-    { duration: 2000, fill: "forwards" }
+    { duration: 3000, fill: "forwards" }
   );
   const keyFrameEffectY = new KeyframeEffect(
     document.querySelector(".red-block"),
     keyframeInYAxis,
-    { duration: 2000, easing: "cubic-bezier(0, 500, 1, 500)", fill: "forwards" }
+    {
+      duration: 3000,
+      easing: "cubic-bezier(1, 1500, 0.8, -1500)",
+      fill: "forwards",
+    }
+  );
+
+  const keyframeEffectOpacity = new KeyframeEffect(
+    document.querySelector(".red-block"),
+    keyframesOpacity,
+    { duration: 2500, fill: "forwards" }
   );
 
   const animationX = new Animation(keyFrameEffectX, document.timeline);
-
   const animationY = new Animation(keyFrameEffectY, document.timeline);
+  const animationOpacity = new Animation(
+    keyframeEffectOpacity,
+    document.timeline
+  );
 
   body.appendChild(newDiv);
   animationX.play();
   animationY.play();
+  animationOpacity.play();
 });

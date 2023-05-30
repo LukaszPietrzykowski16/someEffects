@@ -3,8 +3,5 @@
   height: 100px;
   position: absolute;
   background-color: red;
-  animation: x 2s linear infinite alternate,
-    y 2s infinite cubic-bezier(0, 500, 1, 500);
-  left: 10px;
-  top: 200px;
+  opacity: 0;
 }
