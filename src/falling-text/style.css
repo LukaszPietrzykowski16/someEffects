@@ -2,5 +2,11 @@
   width: 100px;
   height: 100px;
   position: absolute;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: white;
+  background-color: transparent;
+  z-index: 100;
 }

@@ -12,12 +12,22 @@ class AnimatedDiv {
   registerClickEvent() {
     this.body!.addEventListener("click", (e) => {
       this.numClicks++;
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
+      const scrollX =
+        window.scrollX ||
+        (document.documentElement || document.body.parentNode || document.body)
+          .scrollLeft;
+      const scrollY =
+        window.scrollY ||
+        (document.documentElement || document.body.parentNode || document.body)
+          .scrollTop;
+
+      const mouseX = e.clientX - scrollX;
+      const mouseY = e.clientY - scrollY;
 
       const newDiv = document.createElement("div");
       newDiv.style.left = mouseX + "px";
       newDiv.style.top = mouseY + "px";
+      newDiv.innerText = "TEXT";
       newDiv.classList.add("red-block");
 
       const keyframeInXAxis = [
