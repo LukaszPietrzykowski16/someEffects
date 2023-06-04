@@ -1,0 +1,45 @@
+.appear-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text-element {
+  color: white;
+  font-size: 32px;
+  animation: appear 1s forwards;
+  scale: 1;
+}
+
+@keyframes appear {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1.5;
+  }
+}
+
+.appear-tex-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text-element-bottom {
+  color: white;
+  font-size: 32px;
+  animation: appear 1s forwards;
+  scale: 1;
+}
+
+@keyframes appear {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1.5;
+  }
+}

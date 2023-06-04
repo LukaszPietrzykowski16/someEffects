@@ -1,3 +1,5 @@
+import "../style.css";
+
 const component = document.querySelector(".component");
 const textWrapper = document.querySelector<HTMLElement>(".text-wrapper");
 const minValue = 0;
