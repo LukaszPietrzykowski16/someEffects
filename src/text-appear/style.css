@@ -12,12 +12,50 @@
   scale: 1;
 }
 
+.text-element2 {
+  color: white;
+  font-size: 32px;
+  animation: appear2 1s forwards;
+  scale: 1;
+}
+
+.text-element3 {
+  color: white;
+  font-size: 32px;
+  animation: appear3 1s forwards;
+  scale: 1;
+}
+
 @keyframes appear {
   0% {
+    opacity: 0;
     scale: 0;
   }
   100% {
+    opacity: 1;
     scale: 1.5;
+  }
+}
+
+@keyframes appear2 {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes appear3 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
@@ -31,15 +69,6 @@
 .text-element-bottom {
   color: white;
   font-size: 32px;
-  animation: appear 1s forwards;
-  scale: 1;
-}
 
-@keyframes appear {
-  0% {
-    scale: 0;
-  }
-  100% {
-    scale: 1.5;
-  }
+  scale: 1;
 }
