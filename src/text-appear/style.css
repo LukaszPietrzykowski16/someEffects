@@ -8,22 +8,24 @@
 .text-element {
   color: white;
   font-size: 32px;
-  animation: appear 1s forwards;
   scale: 1;
 }
 
 .text-element2 {
   color: white;
   font-size: 32px;
-  animation: appear2 1s forwards;
   scale: 1;
+  opacity: 0;
 }
 
 .text-element3 {
   color: white;
   font-size: 32px;
-  animation: appear3 1s forwards;
   scale: 1;
+}
+
+.fade-in-animation {
+  animation: appear3 1s forwards;
 }
 
 @keyframes appear {

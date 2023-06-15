@@ -4,12 +4,12 @@ import "./style.css";
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log("Section is in view");
+      section?.classList.add("fade-in-animation");
     } else {
       console.log("Seciton is not in view");
     }
   });
 });
 
-const section = document.querySelector(".text-element3");
+const section = document.querySelector(".text-element2");
 observer.observe(section!);
