@@ -7,6 +7,26 @@
   font-family: "Julius Sans One", sans-serif;
 }
 
+@keyframes rotateAndScale {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(720deg) scale(2);
+  }
+}
+
+.honda-civic {
+  width: 400px;
+  height: 400px;
+  animation: rotateAndScale 3s ease-in-out forwards;
+}
+
+.honda-civic img {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   position: relative;
   width: 100%;
